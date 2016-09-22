@@ -21,8 +21,8 @@ function S=rand(mc,T)
 %Code Authors:
 %---------------------------------------------
 
-S=zeros(1,T)%space for resulting row vector
-nS=mc.nStates
+S=zeros(1,T);%space for resulting row vector
+nS=mc.nStates;
 
 %error('Method not yet implemented');
 %continue code from here, and erase the error message........

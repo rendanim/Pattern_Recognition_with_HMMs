@@ -70,7 +70,7 @@ mcv=MarkovChain([0.75;0.25], [0.99 0.01;0.03 0.97]);
 g1v=GaussD('Mean',[4; 5],'Covariance',[1, 0;0, 1]);%Distribution for state=1
 g2v=GaussD('Mean',[1; 3],'Covariance',[2, 1;1, 4]); 
 hv=HMM(mcv, [g1v; g2v]);
-[Yv,Sv]=rand(hv,5);
-
+[Yv,Sv]=rand(hv,1);
+hv.OutputDistr.DataSize
 
 
