@@ -70,7 +70,16 @@ mcv=MarkovChain([0.75;0.25], [0.99 0.01;0.03 0.97]);
 g1v=GaussD('Mean',[4; 5],'Covariance',[1, 0;0, 1]);%Distribution for state=1
 g2v=GaussD('Mean',[1; 3],'Covariance',[2, 1;1, 4]); 
 hv=HMM(mcv, [g1v; g2v]);
-[Yv,Sv]=rand(hv,5);
+[Yv,Sv]=rand(hv,10000);
+
+
+scatter(Yv(1,Sv==1),Yv(2,Sv==1),[],'b');
+hold on
+scatter(Yv(1,Sv==2),Yv(2,Sv==2),[],'y','*');
+title('Scatter Plot of Generated Output for Two Dimensional Gaussian Emisions')
+xlabel('Emission (X_1)')
+ylabel('Emission (X_2)')
+legend('State 1', 'State 2')
 
 
 
