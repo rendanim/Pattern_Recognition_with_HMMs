@@ -13,7 +13,8 @@ M=0;%max discrete random integer
 for i=1:numel(pD)%just in case M is not equal for all distr.
     M=max(M,length(pD(i).ProbMass));
 end;
-pMass=zeros(numel(pD),M);%space for ProbMass matrix
+pMass=zeros(numel(pD),M);
+size(pMass);%space for ProbMass matrix
 for i=1:numel(pD)
     pMass(i,1:length(pD(i).ProbMass))=pD(i).ProbMass';%row ProbMass values
 end;

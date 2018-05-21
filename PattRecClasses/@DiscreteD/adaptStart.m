@@ -15,6 +15,7 @@
 
 function aState=adaptStart(pD)
 nObj=numel(pD);
+%nObj
 aState=repmat(struct('sumWeight',0),nObj,1);%init storage
 % for i=1:nObj%one storage set for each object in the array
 %     aState(i).sumWeight=0;%sum of all weight factors, already zeroed

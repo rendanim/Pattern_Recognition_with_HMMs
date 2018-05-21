@@ -26,7 +26,9 @@ for i=1:numel(pD)%for all objects in the array
     %Arne Leijon, 2012-06-12: scalar PseudoCount added to each sumWeight element
     %Reasonable, because a Jeffreys prior for the DiscreteD.Weight is
     %equivalent to 0.5 "unobserved" count for each possible outcome of the DiscreteD.
-    pD(i).ProbMass=aState(i).sumWeight;%direct ML estimate
+    
+    pD(i).ProbMass=aState(i).sumWeight;
+   %direct ML estimate
 %    pD(i).ProbMass=pD(i).ProbMass./sum(pD(i).ProbMass);%normalize probability mass sum
 %   normalized by DiscreteD.set.ProbMass
 end;

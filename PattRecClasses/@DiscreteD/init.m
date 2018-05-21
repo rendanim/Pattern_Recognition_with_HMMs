@@ -40,6 +40,7 @@ else
     if nObj>maxObs
         warning('Some DiscreteD objects initialized equal');
     end;
+    
     for i=1:nObj
         m=1+mod(i-1,maxObs);%obs value to be emphasized
         p=fObs;
